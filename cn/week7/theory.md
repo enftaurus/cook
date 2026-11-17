@@ -59,12 +59,12 @@ In this program the main thread only **accepts** connections. Each accepted conn
    cd week7
    python3 server.py
    ```
-   Enter `127.0.0.1` (or the machine's IP) and a port such as `5000`.
+   The server binds to `127.0.0.1` (localhost) on port `5000`.
 2. Open **two or more** other terminals and start a client in each:
    ```
    python3 client.py
    ```
-   Enter the same IP and port.
+   It connects to the same address automatically.
 3. Type messages in each client. Type `exit` to disconnect a client.
 4. Press `Ctrl+C` to stop the server.
 
@@ -72,9 +72,7 @@ In this program the main thread only **accepts** connections. Each accepted conn
 
 **Server**
 ```
-Enter server IP: 127.0.0.1
-Enter port: 5000
-TCP Concurrent Server is running...
+TCP Concurrent Server is running on 127.0.0.1 5000
 Connected: ('127.0.0.1', 34042)
 Connected: ('127.0.0.1', 34046)
 Client ('127.0.0.1', 34046) : from B
@@ -86,8 +84,6 @@ Disconnected: ('127.0.0.1', 34042)
 
 **Client 1**
 ```
-Enter server IP: 127.0.0.1
-Enter port: 5000
 Enter message: hello
 Server Echo: hello
 Enter message: how are you
@@ -97,8 +93,6 @@ Enter message: exit
 
 **Client 2 (connected at the same time)**
 ```
-Enter server IP: 127.0.0.1
-Enter port: 5000
 Enter message: from B
 Server Echo: from B
 Enter message: exit

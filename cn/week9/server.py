@@ -9,14 +9,14 @@ def handle_client(data, addr):
     server.sendto(data, addr)
 
 
-host = input("Enter server IP: ")
-port = int(input("Enter port: "))
+host = "127.0.0.1"  # localhost
+port = 7000
 
 server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 server.bind((host, port))
 
-print("UDP Concurrent Server is running...")
+print("UDP Concurrent Server is running on", host, port)
 
 while True:
     data, addr = server.recvfrom(1024)

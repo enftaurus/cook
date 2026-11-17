@@ -52,12 +52,12 @@ The original code was correct. Small improvements:
    cd week9
    python3 server.py
    ```
-   Enter `127.0.0.1` and a port such as `7000`.
+   The server binds to `127.0.0.1` (localhost) on port `7000`.
 2. Open **two or more** terminals and start a client in each:
    ```
    python3 client.py
    ```
-   Enter the same IP and port.
+   It connects to the same address automatically.
 3. Type messages in each client. Type `exit` to quit a client.
 4. Press `Ctrl+C` to stop the server.
 
@@ -65,9 +65,7 @@ The original code was correct. Small improvements:
 
 **Server**
 ```
-Enter server IP: 127.0.0.1
-Enter port: 7000
-UDP Concurrent Server is running...
+UDP Concurrent Server is running on 127.0.0.1 7000
 Thread-1 (handle_client) - Client ('127.0.0.1', 54095) : hello
 Thread-2 (handle_client) - Client ('127.0.0.1', 54095) : how are you
 Thread-3 (handle_client) - Client ('127.0.0.1', 48110) : client two here
@@ -75,8 +73,6 @@ Thread-3 (handle_client) - Client ('127.0.0.1', 48110) : client two here
 
 **Client 1**
 ```
-Enter server IP: 127.0.0.1
-Enter port: 7000
 Enter message: hello
 Server Echo: hello
 Enter message: how are you
@@ -86,8 +82,6 @@ Enter message: exit
 
 **Client 2**
 ```
-Enter server IP: 127.0.0.1
-Enter port: 7000
 Enter message: client two here
 Server Echo: client two here
 Enter message: exit

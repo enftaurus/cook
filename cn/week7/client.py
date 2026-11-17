@@ -1,8 +1,8 @@
 # Week 7: TCP Echo Client
 import socket
 
-host = input("Enter server IP: ")
-port = int(input("Enter port: "))
+host = "127.0.0.1"  # localhost
+port = 5000
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((host, port))

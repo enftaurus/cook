@@ -1,8 +1,8 @@
 # Week 8: UDP Echo Client
 import socket
 
-host = input("Enter server IP: ")
-port = int(input("Enter port: "))
+host = "127.0.0.1"  # localhost
+port = 6000
 
 client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 

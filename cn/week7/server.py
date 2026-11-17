@@ -15,15 +15,15 @@ def handle_client(conn, addr):
     print("Disconnected:", addr)
 
 
-host = input("Enter server IP: ")
-port = int(input("Enter port: "))
+host = "127.0.0.1"  # localhost
+port = 5000
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 server.bind((host, port))
 server.listen(5)
 
-print("TCP Concurrent Server is running...")
+print("TCP Concurrent Server is running on", host, port)
 
 while True:
     conn, addr = server.accept()

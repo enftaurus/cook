@@ -56,12 +56,12 @@ The original code was correct. Small improvements:
    cd week8
    python3 server.py
    ```
-   Enter `127.0.0.1` and a port such as `6000`.
+   The server binds to `127.0.0.1` (localhost) on port `6000`.
 2. In another terminal, start the client:
    ```
    python3 client.py
    ```
-   Enter the same IP and port.
+   It connects to the same address automatically.
 3. Type messages. Type `exit` to quit the client.
 4. Press `Ctrl+C` to stop the server.
 
@@ -71,9 +71,7 @@ The original code was correct. Small improvements:
 
 **Server**
 ```
-Enter server IP: 127.0.0.1
-Enter port: 6000
-UDP Iterative Server is running...
+UDP Iterative Server is running on 127.0.0.1 6000
 Client ('127.0.0.1', 59030) : hello
 Client ('127.0.0.1', 59030) : how are you
 Client ('127.0.0.1', 36496) : client two here
@@ -81,8 +79,6 @@ Client ('127.0.0.1', 36496) : client two here
 
 **Client 1**
 ```
-Enter server IP: 127.0.0.1
-Enter port: 6000
 Enter message: hello
 Server Echo: hello
 Enter message: how are you
@@ -92,8 +88,6 @@ Enter message: exit
 
 **Client 2**
 ```
-Enter server IP: 127.0.0.1
-Enter port: 6000
 Enter message: client two here
 Server Echo: client two here
 Enter message: exit
